@@ -2,12 +2,10 @@
   "name": "chelsea-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://m-ttriley.github.io/chelsea-site",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "export": "next export",
-    "deploy": "next build && next export && gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
