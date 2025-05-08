@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Rigatoni-Regular';
+  src: url('/fonts/Rigatoni-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rigatoni-Light';
+  src: url('/fonts/Rigatoni-Light.otf') format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #4e483c;
+}

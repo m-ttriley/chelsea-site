@@ -1,0 +1,48 @@
+.signup {
+    color: #f8f3ce;
+    font-family: 'Rigatoni-Light';
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.signupContainer {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+.emailInputContainer {
+    background-color: #f9fd5d;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 75px;
+    margin-top: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 16px;
+  }
+
+  .emailInput {
+    background: none;
+    border: none;
+    margin-left: 16px;
+  }
+
+  .signupButton {
+    position: absolute;
+    right: 16px;
+    border: none;
+    background: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .emailInput::placeholder {
+    font-size: 14px;
+  }

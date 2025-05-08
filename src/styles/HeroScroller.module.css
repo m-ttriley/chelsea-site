@@ -1,0 +1,151 @@
+.heroContainer {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  /* Cartoon bubble look */
+  background: #fff;
+  border: 6px solid #f9fd5d;
+  border-radius: 75px;
+  /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); */
+  z-index: 2;
+  width: 100%;
+}
+
+.heroScrollerContainer {
+  overflow: visible;
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.productList {
+  width: 90%;
+  background-color: #4e483c;
+  margin: auto;
+  border-radius: 75px;
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.productItem {
+  margin: 0 12px;
+}
+
+.productItemContainer {
+width: 80%;
+margin: auto;
+}
+
+.productImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f3ce;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.productImage img {
+  max-width: 70%;
+  padding: 25px 0;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.productCopy {
+
+}
+
+.productTitle {
+  font-family: 'Rigatoni-Regular';
+  color: #f8f3ce;
+  font-size: 24px;
+  text-align: left;
+  margin: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #f9fd5d;
+  line-height: 35px;
+}
+
+.productDescription {
+  font-family: 'Rigatoni-Light';
+  color: #f8f3ce;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 7px;
+  font-size: 7px;
+}
+
+.heroScrollerContainer::after {
+  content: "";
+  background-image: url('/speechArrow.png');
+  position: absolute;
+  background-size: cover;
+  width: 59px;
+  height: 50px;
+  left: 95%;
+  top: 89%;
+}
+
+.imageSection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productSection {
+  width: 100%;
+  height: 100%;
+  background-color: #f9fd5d;
+
+  h2 {
+    font-family: 'Rigatoni-Regular';
+    color: #4e483c;
+    font-size: 24px;
+    text-align: left;
+    margin: 0;
+    padding-left: 70px;
+  }
+}
+
+.imageSection img {
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.aboutSection {
+  width: 100%;
+  height: 100%;
+  background-color: #f9fd5d;
+}
+
+.aboutContainer {
+  width: 65%;
+  margin: auto;
+  background-color: #f9fd5d;
+  h2 {
+    font-family: 'Rigatoni-Regular';
+    color: #4e483c;
+    font-size: 52px;
+    text-align: left;
+    margin: 0;
+    border-bottom: 5px solid #4e483c;
+  }
+
+  p {
+    font-family: 'sans-serif';
+    color: #4e483c;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 7px;
+  }
+}
