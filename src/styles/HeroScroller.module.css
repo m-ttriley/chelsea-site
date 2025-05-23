@@ -1,16 +1,41 @@
 .heroContainer {
   position: relative;
-  height: 400px;
+  height: 425px;
   overflow: hidden;
   scroll-behavior: smooth;
 
   /* Cartoon bubble look */
   background: #fff;
   border: 6px solid #f9fd5d;
-  border-radius: 75px;
+  border-radius: 40px;
   /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); */
   z-index: 2;
   width: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  font-family: 'BG-Light';
+}
+
+.controlButton {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: none;
+  border: none;
+  font-family: 'BG-Thin';
+  font-weight: lighter;
+  padding: 8px 20px 12px 20px;
+  font-size: 16px;
+}
+
+.controlSpacer {
+  width: 8px;
+  height: 30px;
 }
 
 .heroScrollerContainer {
@@ -21,11 +46,12 @@
 }
 
 .productList {
-  width: 90%;
+  width: 95%;
+  padding-top: 25px;
+  padding-bottom: 12px;
   background-color: #4e483c;
   margin: auto;
-  border-radius: 75px;
-  height: 85%;
+  border-radius: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,6 +59,21 @@
 
 .productItem {
   margin: 0 12px;
+  position: relative;
+}
+
+.productPrice {
+  font-family: 'Rigatoni-Light';
+  text-align: left;
+  letter-spacing: 0.03em;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #f9fd5d;
+  color: #4e483c;
+  padding: 15px 6px;
+  font-size: 8px;
+  left: 75%;
+  top: -12px;
 }
 
 .productItemContainer {
@@ -71,15 +112,18 @@ margin: auto;
   font-size: 18px;
   border-bottom: 1px solid #f9fd5d;
   line-height: 35px;
+  padding-bottom: 2px;
 }
 
 .productDescription {
-  font-family: 'Rigatoni-Light';
+  font-family: 'BG-Thin';
   color: #f8f3ce;
   font-size: 12px;
   text-align: left;
   margin-top: 7px;
-  font-size: 7px;
+  line-height: 12px;
+  font-size: 11px;
+  letter-spacing: 0.03em;
 }
 
 .heroScrollerContainer::after {
@@ -106,12 +150,13 @@ margin: auto;
   background-color: #f9fd5d;
 
   h2 {
-    font-family: 'Rigatoni-Regular';
     color: #4e483c;
-    font-size: 24px;
     text-align: left;
     margin: 0;
-    padding-left: 70px;
+    padding-left: 58px;
+    font-family: 'Rigatoni-Light';
+    font-size: 60px;
+    margin-bottom: 15px;
   }
 }
 
@@ -129,23 +174,32 @@ margin: auto;
 }
 
 .aboutContainer {
-  width: 65%;
+  width: 75%;
   margin: auto;
   background-color: #f9fd5d;
   h2 {
-    font-family: 'Rigatoni-Regular';
     color: #4e483c;
-    font-size: 52px;
     text-align: left;
     margin: 0;
     border-bottom: 5px solid #4e483c;
+    font-family: 'Rigatoni-Light';
+    letter-spacing: 0.05em;
+    padding-bottom: 10px;
+    font-size: 57px;
   }
 
   p {
-    font-family: 'sans-serif';
     color: #4e483c;
-    font-size: 16px;
     text-align: left;
     margin-top: 7px;
+    font-family: 'BG-Thin';
+    line-height: 21px;
+    font-size: 15px;
+  }
+
+  mark {
+    background-color: #4e483c;
+    color: #fff;
+    padding: 1px;
   }
 }

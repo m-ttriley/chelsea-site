@@ -9,7 +9,7 @@ export default function Page() {
         <Image 
           src={ChelseaLogo}
           alt="Chelsea Logo" 
-          style={{ width: '100%', height: 'auto', maxWidth: '350px' }}
+          style={{ width: '100%', height: 'auto', maxWidth: '280px', marginTop: '15px' }}
         />
       </div>
       <HeroScroller />
