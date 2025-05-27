@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/ImageCarousel.module.css"; // adjust as needed
 
 const images: string[] = [
