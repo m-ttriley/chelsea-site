@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import ImageCarousel from './ImageCarousel';
 import styles from '../styles/HeroScroller.module.css'; // ✅ updated path
 
 const HeroScroller: React.FC = () => {
@@ -43,7 +44,7 @@ const HeroScroller: React.FC = () => {
       <div className={styles.heroScrollerContainer}>
         <div className={styles.heroContainer} ref={containerRef}>
           <div className={styles.imageSection} ref={homeRef}>
-            <img src="/images/home.jpg" alt="Home" />
+            <ImageCarousel />
           </div>
           <div className={styles.productSection} ref={productsRef}>
             <h2>PRODUCTS</h2>

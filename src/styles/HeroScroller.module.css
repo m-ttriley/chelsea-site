@@ -160,13 +160,6 @@ margin: auto;
   }
 }
 
-.imageSection img {
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
-  margin: auto;
-}
-
 .aboutSection {
   width: 100%;
   height: 100%;
