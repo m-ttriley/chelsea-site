@@ -13,6 +13,13 @@
   width: 100%;
 }
 
+.frog {
+  width: 70px;
+  position: absolute;
+  right: -95px;
+  top: 102%;
+}
+
 .controls {
   display: flex;
   justify-content: center;

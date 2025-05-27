@@ -98,7 +98,7 @@ const HeroScroller: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className={styles.speechArrow} />
+        <img className={styles.frog} src="/images/icons/frog.png" alt="Frog" />
       </div>
     </div>
   );
