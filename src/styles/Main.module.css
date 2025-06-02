@@ -1,60 +1,19 @@
-.signup {
-    color: #f8f3ce;
-    font-family: 'Rigatoni-Light';
-    letter-spacing: 2px;
-    font-size: 12px;
-    margin-top: 16px;
+.headerImageContainer {
+  display: flex;
+  justify-content: center;
+  animation: hueRotateAnim 200s ease infinite;
 }
 
-.signupContainer {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    text-align: center;
-    font-weight: lighter;
+@keyframes hueRotateAnim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
-.emailInputContainer {
-    background-color: #f9fd5d;
-    border: none;
-    padding-top: 8px;
-    padding-bottom: 12px;
-    font-size: 16px;
-    border-radius: 75px;
-    margin-top: 10px;
-    text-align: left;
-    box-sizing: border-box;
-    position: relative;
-    margin-top: 16px;
-  }
-
-  .emailInput {
-    background: none;
-    border: none;
-    margin-left: 24px;
-    font-size: 14px;
-    font-family: 'BG-Light';
-    font-size: 16px;
-
-    &::placeholder {
-      color: black;
-    }
-  }
-
-  .signupButton {
-    position: absolute;
-    font-family: 'BG-Light';
-    font-size: 16px;
-    right: 24px;
-    border: none;
-    background: none;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .footer {
+.footer {
     background-color: #4e483c;
     color: #f8f3ce;
     padding: 20px 0;
