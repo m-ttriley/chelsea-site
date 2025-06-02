@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import Image from 'next/image';
 import ImageCarousel from './ImageCarousel';
 import styles from '../styles/HeroScroller.module.css'; // ✅ updated path
 
