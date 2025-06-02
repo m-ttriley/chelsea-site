@@ -25,7 +25,6 @@ const ImageCarousel: React.FC = () => {
   }, []);
 
   const nextIndex = (currentIndex + 1) % images.length;
-  console.log("Current Index:", currentIndex);
   return (
     <div className={styles.carouselContainer}>
       <img
