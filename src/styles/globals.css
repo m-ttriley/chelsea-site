@@ -1,3 +1,12 @@
+@keyframes hueRotateAnim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
 @font-face {
   font-family: 'Rigatoni-Regular';
   src: url('/fonts/Rigatoni-Regular.ttf') format('truetype');
@@ -64,4 +73,5 @@ body {
   height: 100%;
   overflow-y: scroll;
   background-color: #4e483c;
+  animation: hueRotateAnim 130s ease infinite;
 }

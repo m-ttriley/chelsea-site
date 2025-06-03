@@ -1,7 +1,7 @@
 .headerImageContainer {
   display: flex;
   justify-content: center;
-  animation: hueRotateAnim 200s ease infinite;
+  /* animation: hueRotateAnim 200s ease infinite; */
 }
 
 @keyframes hueRotateAnim {
@@ -16,12 +16,12 @@
 .footer {
     background-color: #4e483c;
     color: #f8f3ce;
-    padding: 20px 0;
+    max-width: 800px;
     text-align: center;
-    font-family: 'BG-Thin';
+    font-family: 'BG-Regular';
     font-size: 10px;
-    letter-spacing: 0.05em;
     opacity: 0.5;
-    width: 80%;
+    width: 66%;
+    line-height: 12px;
     margin: 0 auto;
   }

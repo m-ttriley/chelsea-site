@@ -8,12 +8,12 @@
 }
 
 .heroScrollerPageContainer {
-  animation: hueRotateAnim 200s ease infinite;
+  /* animation: hueRotateAnim 200s ease infinite; */
 }
 
 .heroContainer {
   position: relative;
-  height: 425px;
+  height: 430px;
   overflow: hidden;
   scroll-behavior: smooth;
   transition: all 0.5s ease;
@@ -21,10 +21,9 @@
   /* Cartoon bubble look */
   background: #fff;
   border: 6px solid #f9fd5d;
-  border-radius: 40px;
+  border-radius: 70px;
   /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); */
   z-index: 2;
-  width: 100%;
 }
 
 .frog {
@@ -41,6 +40,7 @@
   align-items: center;
   margin: 20px 0;
   font-family: 'BG-Light';
+  margin-bottom: 16px;
 }
 
 .controlButton {
@@ -51,7 +51,7 @@
   border: none;
   font-family: 'BG-Thin';
   font-weight: lighter;
-  padding: 8px 20px 12px 20px;
+  padding: 4px 20px 8px;
   font-size: 16px;
 }
 
@@ -153,8 +153,8 @@ margin: auto;
   background-size: cover;
   width: 59px;
   height: 50px;
-  top: 90%;
-  left: 96%;
+  top: 89%;
+  left: 94%;
 }
 
 .speechArrowColor {
@@ -180,8 +180,9 @@ margin: auto;
     text-align: center;
     margin: 0;
     font-family: 'Rigatoni-Light';
-    font-size: 60px;
     margin-bottom: 18px;
+    font-size: 65px;
+    font-weight: normal;
   }
 }
 
@@ -227,6 +228,7 @@ margin: auto;
     font-family: 'Rigatoni-Light';
     letter-spacing: 2px;
     font-size: 12px;
+    padding-left: 12px;
     margin-top: 16px;
 }
 
@@ -243,8 +245,8 @@ margin: auto;
     background-color: #f9fd5d;
     transition: all 0.5s ease;
     border: none;
-    padding-top: 8px;
-    padding-bottom: 12px;
+    padding-top: 4px;
+    padding-bottom: 8px;
     font-size: 16px;
     border-radius: 75px;
     margin-top: 10px;
@@ -260,7 +262,7 @@ margin: auto;
     margin-left: 24px;
     font-size: 14px;
     font-family: 'BG-Light';
-    font-size: 16px;
+    font-size: 18px;
 
     &::placeholder {
       color: black;
@@ -270,7 +272,7 @@ margin: auto;
   .signupButton {
     position: absolute;
     font-family: 'BG-Light';
-    font-size: 16px;
+    font-size: 18px;
     right: 24px;
     border: none;
     background: none;
