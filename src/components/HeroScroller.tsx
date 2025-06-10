@@ -92,7 +92,7 @@ const HeroScroller: React.FC = () => {
                 </div>
                 <div className={styles.productCopy}>
                   <h3 className={styles.productTitle}>Peppermint</h3>
-                  <p className={styles.productDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                  <p className={styles.productDescription}>Notes: Peppermint Essential Oil</p>
                 </div>
                 </div>
               </div>
@@ -100,11 +100,11 @@ const HeroScroller: React.FC = () => {
               <div className={styles.productPrice}>$20</div>
               <div className={styles.productItemContainer}>
                 <div className={styles.productImage}>
-                  <img src="/images/products/spearmint.png" alt="Spearmint" />
+                  <img src="/images/products/spearmint.png" alt="Wintergreen" />
                 </div>
                 <div className={styles.productCopy}>
-                  <h3 className={styles.productTitle}>Spearmint</h3>
-                  <p className={styles.productDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                  <h3 className={styles.productTitle}>Wintergreen</h3>
+                  <p className={styles.productDescription}>Notes: Organic Wintergreen Essential Oil, Organic Cane Sugar</p>
                 </div>
               </div>
               </div>
@@ -116,7 +116,7 @@ const HeroScroller: React.FC = () => {
                 </div>
                 <div className={styles.productCopy}>
                   <h3 className={styles.productTitle}>Citrus</h3>
-                  <p className={styles.productDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                  <p className={styles.productDescription}>Notes: Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil</p>
                 </div>
               </div>
               </div>
@@ -138,7 +138,7 @@ const HeroScroller: React.FC = () => {
             <path className={styles.speechArrowColor} style={{ fill: colorCode }} d="M246,213.12c-.41.08-.7-.13-1.05-.27-11.06-4.53-22.34-10.44-33.35-15.37-44.73-20.06-90.03-39.06-136.4-55.1-3.27,1.69-7.19,1.25-10.76.9C19.92,139.01-9.29,94.27,3.36,51.48,18.13,1.49,79.91-15.96,119.21,17.95c2.86-.12,5.73-.31,8.6-.2.8.03,6.1.42,6.36.6.55.37-.28,2.29-.42,2.97-.58,2.84-1.99,9.03-1.5,11.67.17.94,2.83,4.85,3.48,6.12,7.86,15.44,9.67,32.33,6.03,49.26-.31,1.47-1.3,3.81-1.38,5.12-.11,1.91,2.34,7.07,1.89,8.58-.14.48-.84.61-.82,1.15.08,1.55,1.47,5.65,1.99,7.37,12.91,42.43,52.47,70.7,87.92,93.76l14.62,8.78Z"/>
           </svg>
         </div>
-        <img className={styles.frog} src="/images/icons/frog.png" alt="SpeechBubble" />
+        <img className={styles.frog} src="/images/frog/frog.webp" alt="Frog" />
       </div>
       <div>
       <div className={styles.signupContainer}>
