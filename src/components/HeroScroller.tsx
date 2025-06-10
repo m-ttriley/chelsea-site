@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import ImageCarousel from './ImageCarousel';
 import styles from '../styles/HeroScroller.module.css'; // ✅ updated path
+import LogoComponent from './LogoComponent';
 
 const HeroScroller: React.FC = () => {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -23,6 +24,10 @@ const HeroScroller: React.FC = () => {
     };
 
   return (
+    <>
+    <div className={styles.headerImageContainer}>
+      <LogoComponent width={'50%'} fill={colorCode}></LogoComponent>
+      </div>
     <div className={styles.heroScrollerPageContainer}>
       <div className={styles.controls}>
         <button style={{backgroundColor: '#f9fd5d'}} className={styles.controlButton} onClick={() => {
@@ -164,6 +169,7 @@ const HeroScroller: React.FC = () => {
       </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/ImageCarousel.module.css"; // adjust as needed
 
 const images: string[] = [
-  "/images/carousel/carousel_1.jpg",
-  "/images/carousel/carousel_2.jpg",
-  "/images/carousel/carousel_3.jpg",
-  "/images/carousel/carousel_4.jpg",
+  "/images/carousel/chelsea_web_image_1.jpg",
+  "/images/carousel/chelsea_web_images_2.jpg",
+  "/images/carousel/chelsea_web_image_3.jpg",
+  "/images/carousel/chelsea_web_images_4.jpg",
+  "/images/carousel/chelsea_web_images_5.jpg",
+  "/images/carousel/chelsea_web_image_6.jpg",
 ];
 
 const ImageCarousel: React.FC = () => {

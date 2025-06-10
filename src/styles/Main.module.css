@@ -1,9 +1,3 @@
-.headerImageContainer {
-  display: flex;
-  justify-content: center;
-  /* animation: hueRotateAnim 200s ease infinite; */
-}
-
 @keyframes hueRotateAnim {
   0% {
     filter: hue-rotate(0deg);

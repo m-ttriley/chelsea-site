@@ -11,6 +11,14 @@
   /* animation: hueRotateAnim 200s ease infinite; */
 }
 
+.headerImageContainer {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  /* animation: hueRotateAnim 200s ease infinite; */
+}
+
 .heroContainer {
   position: relative;
   height: 430px;
