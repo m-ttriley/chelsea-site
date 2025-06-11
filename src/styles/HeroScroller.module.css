@@ -16,6 +16,8 @@
   justify-content: center;
   width: 50%;
   margin: auto;
+  min-width: 550px;
+  max-width: 675px;
   /* animation: hueRotateAnim 200s ease infinite; */
 }
 
