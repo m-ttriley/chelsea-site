@@ -1,0 +1,123 @@
+.headerImageContainer {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.imageCarouselContainer {
+  width: 100%;
+  height: 300px;
+  border-top: 2px solid #f9fd5d;
+  border-bottom: 2px solid #f9fd5d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.productSection {
+  margin-bottom: 18px;
+
+  h2 {
+    color: #f8f3ce;
+    text-align: center;
+    margin: 0;
+    font-family: 'Rigatoni-Light';
+    margin-bottom: 18px;
+    font-size: 42px;
+    font-weight: normal;
+  }
+}
+
+.aboutSection {
+  margin-bottom: 18px;
+
+  h2 {
+    color: #f8f3ce;
+    text-align: center;
+    margin: 0;
+    font-family: 'Rigatoni-Light';
+    margin-bottom: 18px;
+    font-size: 42px;
+    font-weight: normal;
+  }
+
+  p {
+    color: #4e483c;
+    text-align: center;
+    margin-top: 7px;
+    font-family: 'BG-Thin';
+    line-height: 21px;
+    font-size: 15px;
+    margin: 10px auto;
+  }
+
+  mark {
+    background-color: #4e483c;
+    color: #fff;
+    padding: 1px;
+  }
+}
+
+.productList {
+  padding: 15px;
+}
+
+.signup {
+    color: #f8f3ce;
+    font-family: 'Rigatoni-Light';
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding-left: 12px;
+    margin-top: 16px;
+}
+
+.signupContainer {
+    display: block;
+    margin: 0 auto;
+    max-width: 750px;
+    width: 80%;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.emailInputContainer {
+    background-color: #f9fd5d;
+    transition: all 0.5s ease;
+    border: none;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    border-radius: 75px;
+    margin-top: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 16px;
+  }
+
+  .emailInput {
+    background: none;
+    border: none;
+    margin-left: 24px;
+    font-size: 14px;
+    font-family: 'BG-Light';
+    font-size: 18px;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  .signupButton {
+    position: absolute;
+    font-family: 'BG-Light';
+    font-size: 18px;
+    right: 24px;
+    border: none;
+    background: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }

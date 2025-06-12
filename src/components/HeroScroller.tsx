@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import ImageCarousel from './ImageCarousel';
 import styles from '../styles/HeroScroller.module.css'; // ✅ updated path
+import ProductItem from './ProductItem';
 import LogoComponent from './LogoComponent';
 
 const HeroScroller: React.FC = () => {
@@ -27,7 +28,7 @@ const HeroScroller: React.FC = () => {
     <>
     <div className={styles.headerImageContainer}>
       <LogoComponent width={'50%'} fill={colorCode}></LogoComponent>
-      </div>
+    </div>
     <div className={styles.heroScrollerPageContainer}>
       <div className={styles.controls}>
         <button style={{backgroundColor: '#f9fd5d'}} className={styles.controlButton} onClick={() => {
@@ -84,42 +85,27 @@ const HeroScroller: React.FC = () => {
           <div className={styles.productSection} style={{backgroundColor: colorCode}} ref={productsRef}>
             <h2>PRODUCTS</h2>
             <div className={styles.productList}>
-              <div className={styles.productItem}>
-              <div className={styles.productPrice}>$20</div>
-              <div className={styles.productItemContainer}>
-                <div className={styles.productImage}>
-                  <img src="/images/products/peppermint.png" alt="Peppermint" />
-                </div>
-                <div className={styles.productCopy}>
-                  <h3 className={styles.productTitle}>Peppermint</h3>
-                  <p className={styles.productDescription}>Notes: Peppermint Essential Oil</p>
-                </div>
-                </div>
-              </div>
-              <div className={styles.productItem}>
-              <div className={styles.productPrice}>$20</div>
-              <div className={styles.productItemContainer}>
-                <div className={styles.productImage}>
-                  <img src="/images/products/spearmint.png" alt="Wintergreen" />
-                </div>
-                <div className={styles.productCopy}>
-                  <h3 className={styles.productTitle}>Wintergreen</h3>
-                  <p className={styles.productDescription}>Notes: Organic Wintergreen Essential Oil, Organic Cane Sugar</p>
-                </div>
-              </div>
-              </div>
-              <div className={styles.productItem}>
-              <div className={styles.productPrice}>$20</div>
-              <div className={styles.productItemContainer}>
-                <div className={styles.productImage}>
-                  <img src="/images/products/citrus.png" alt="Citrus" />
-                </div>
-                <div className={styles.productCopy}>
-                  <h3 className={styles.productTitle}>Citrus</h3>
-                  <p className={styles.productDescription}>Notes: Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil</p>
-                </div>
-              </div>
-              </div>
+              <ProductItem
+                imageSrc="/images/products/peppermint.png"
+                imageAlt="Peppermint"
+                title="Peppermint"
+                price="$20"
+                description="Notes: Peppermint Essential Oil"
+              />
+                <ProductItem
+                imageSrc="/images/products/spearmint.png"
+                imageAlt="Wintergreen"
+                title="Wintergreen"
+                price="$20"
+                description="Notes: Organic Wintergreen Essential Oil, Organic Cane Sugar"
+                />
+                <ProductItem
+                imageSrc="/images/products/citrus.png"
+                imageAlt="Citrus"
+                title="Citrus"
+                price="$20"
+                description="Notes: Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil"
+                />
             </div>
           </div>
           <div className={styles.aboutSection} style={{borderColor: colorCode, backgroundColor: colorCode}} ref={aboutRef}>

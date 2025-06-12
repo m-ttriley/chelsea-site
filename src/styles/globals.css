@@ -1,9 +1,9 @@
 @keyframes hueRotateAnim {
   0% {
-    filter: hue-rotate(0deg) saturate(1.1);
+    filter: hue-rotate(0deg);
   }
   100% {
-    filter: hue-rotate(360deg) saturate(1.4);
+    filter: hue-rotate(360deg);
   }
 }
 
@@ -68,10 +68,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  height: 100%;
-  overflow-y: scroll;
+  @media (min-width: 768px) {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    height: 100%;
+    overflow-y: scroll;
+  }
   background-color: #4e483c;
   animation: hueRotateAnim 130s ease infinite;
 }
