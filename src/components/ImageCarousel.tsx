@@ -3,14 +3,18 @@ import styles from "../styles/ImageCarousel.module.css"; // adjust as needed
 
 const images: string[] = [
   "/images/carousel/chelsea_web_image_1.jpg",
-  "/images/carousel/chelsea_web_images_2.jpg",
+  "/images/carousel/chelsea_web_image_2.jpg",
   "/images/carousel/chelsea_web_image_3.jpg",
-  "/images/carousel/chelsea_web_images_4.jpg",
-  "/images/carousel/chelsea_web_images_5.jpg",
+  "/images/carousel/chelsea_web_image_4.jpg",
+  "/images/carousel/chelsea_web_image_5.jpg",
   "/images/carousel/chelsea_web_image_6.jpg",
 ];
 
-const ImageCarousel: React.FC = () => {
+interface ImageCarouselProps {
+  style?: React.CSSProperties;
+}
+
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ style }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
@@ -28,7 +32,7 @@ const ImageCarousel: React.FC = () => {
 
   const nextIndex = (currentIndex + 1) % images.length;
   return (
-    <div className={styles.carouselContainer}>
+    <div className={styles.carouselContainer} style={style}>
       <img
         src={images[currentIndex]}
         className={`${styles.image} ${fade ? styles.fadeOut : styles.staticImage}`}

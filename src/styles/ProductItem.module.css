@@ -4,7 +4,7 @@
 }
 
 .productPrice {
-  font-family: 'Rigatoni-Bold';
+  font-family: 'Rigatoni-Light';
   text-align: left;
   letter-spacing: 0.03em;
   position: absolute;
@@ -59,6 +59,7 @@ margin: auto;
   border-bottom: 1px solid #3d9ccc;
   line-height: 35px;
   padding-bottom: 2px;
+  letter-spacing: 0.06em;
 }
 
 .productDescription {

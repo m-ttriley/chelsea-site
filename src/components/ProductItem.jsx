@@ -6,7 +6,8 @@ const ProductItem = ({
   imageSrc,
   imageAlt,
   title,
-  description
+  description,
+  borderColor,
 }) => (
   <div className={styles.productItem}>
     <div className={styles.productPrice}>{price}</div>
@@ -15,7 +16,7 @@ const ProductItem = ({
         <img src={imageSrc} alt={imageAlt} />
       </div>
       <div className={styles.productCopy}>
-        <h3 className={styles.productTitle}>{title}</h3>
+        <h3 style={{borderBottomColor: borderColor}} className={styles.productTitle}>{title}</h3>
         <p className={styles.productDescription}>{description}</p>
       </div>
     </div>
