@@ -34,7 +34,7 @@ margin: auto;
   align-items: center;
   background-color: #f8f3ce;
   border-radius: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .productImage img {
@@ -67,7 +67,7 @@ margin: auto;
   color: #f8f3ce;
   font-size: 12px;
   text-align: left;
-  margin-top: 7px;
+  margin-top: 5px;
   line-height: 12px;
   font-size: 11px;
   letter-spacing: 0.03em;
