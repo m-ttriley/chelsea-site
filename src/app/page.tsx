@@ -66,7 +66,7 @@ export default function Page() {
     );
   }
   return (
-    <div className={styles.mainMobile}>
+    <div className={styles.mainMobile} style={{ backgroundColor: '#4e483c' }}>
       <div>
         {/* <HeroScroller /> */}
         <MobileView />

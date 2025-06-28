@@ -65,4 +65,8 @@ body {
     height: 100%;
     overflow-y: scroll;
   }
+
+  @media (max-width: 768px) {
+    background-color: #4e483c;
+  }
 }
