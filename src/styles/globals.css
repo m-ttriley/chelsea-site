@@ -1,42 +1,3 @@
-@keyframes hueRotateAnim {
-  0% { background-color: #4e483c; }
-  2.86% { background-color: #4e4b3c; }
-  5.71% { background-color: #4e4b3c; }
-  8.57% { background-color: #4b4e3c; }
-  11.43% { background-color: #484e3c; }
-  14.29% { background-color: #454e3c; }
-  17.14% { background-color: #424e3c; }
-  20.00% { background-color: #3f4e3c; }
-  22.86% { background-color: #3c4e3c; }
-  25.71% { background-color: #3c4e3f; }
-  28.57% { background-color: #3c4e42; }
-  31.43% { background-color: #3c4e45; }
-  34.29% { background-color: #3c4e48; }
-  37.14% { background-color: #3c4e4b; }
-  40.00% { background-color: #3c4e4e; }
-  42.86% { background-color: #3c4b4e; }
-  45.71% { background-color: #3c484e; }
-  48.57% { background-color: #3c454e; }
-  51.43% { background-color: #3c424e; }
-  54.29% { background-color: #3c3f4e; }
-  57.14% { background-color: #3c3c4e; }
-  60.00% { background-color: #3f3c4e; }
-  62.86% { background-color: #423c4e; }
-  65.71% { background-color: #453c4e; }
-  68.57% { background-color: #483c4e; }
-  71.43% { background-color: #4b3c4e; }
-  74.29% { background-color: #4e3c4e; }
-  77.14% { background-color: #4e3c4b; }
-  80.00% { background-color: #4e3c48; }
-  82.86% { background-color: #4e3c45; }
-  85.71% { background-color: #4e3c42; }
-  88.57% { background-color: #4e3c3f; }
-  91.43% { background-color: #4e3c3c; }
-  94.29% { background-color: #4e3f3c; }
-  97.14% { background-color: #4e423c; }
-  100.00% { background-color: #4e453c; }
-}
-
 @font-face {
   font-family: 'Rigatoni-Regular';
   src: url('/fonts/Rigatoni-Regular.ttf') format('truetype');
@@ -104,5 +65,4 @@ body {
     height: 100%;
     overflow-y: scroll;
   }
-  animation: hueRotateAnim 360s linear infinite alternate;
 }
