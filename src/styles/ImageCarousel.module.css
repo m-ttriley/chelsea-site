@@ -4,7 +4,7 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: multiply;
 }
 
 .image {

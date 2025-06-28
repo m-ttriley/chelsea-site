@@ -11,7 +11,7 @@ const MobileView = () => {
         <LogoComponent fill={'#f9fd5d'}></LogoComponent>
       </div>
       <div className={styles.imageCarouselContainer}>
-        <ImageCarousel />
+        <ImageCarousel style={{ backgroundColor: "#f9fd5d" }} />
       </div>
       <div className={styles.productSection}>
         <h2>PRODUCTS</h2>
