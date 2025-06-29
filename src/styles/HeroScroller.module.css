@@ -239,7 +239,8 @@
     right: 24px;
     border: none;
     background: none;
-
+    text-decoration: none;
+    
     &:hover {
       cursor: pointer;
     }
