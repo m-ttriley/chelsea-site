@@ -165,9 +165,9 @@ const HeroScroller: React.FC = () => {
           </div>
           <div className={styles.productSection} style={{transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors[colorCode][colorIndex]}} ref={productsRef}>
             <div className={styles.productHeader}>
-            <h2>PRODUCTS</h2>
+            <h2 style={{transitionDuration: quickTransition ? '0.5s' : '2s', color: colors['gray'][colorIndex]}}>PRODUCTS</h2>
             </div>
-            <div className={styles.productList}>
+            <div style={{transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors['gray'][colorIndex]}} className={styles.productList}>
               <ProductItem
                 imageSrc="/images/products/peppermint.png"
                 imageAlt="Peppermint"

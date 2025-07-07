@@ -10,7 +10,7 @@ const ProductItem = ({
   borderColor,
 }) => (
   <div className={styles.productItem}>
-    <div className={styles.productPrice}>{price}</div>
+    <div style={{ backgroundColor: borderColor }} className={styles.productPrice}>{price}</div>
     <div className={styles.productItemContainer}>
       <div className={styles.productImage}>
         <img src={imageSrc} alt={imageAlt} />
