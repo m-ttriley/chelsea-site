@@ -10,8 +10,10 @@ const MobileView = () => {
       <div className={styles.headerImageContainer}>
         <LogoComponent fill={'#f9fd5d'}></LogoComponent>
       </div>
+      <div className={styles.heroContainer}>
       <div className={styles.imageCarouselContainer}>
         <ImageCarousel style={{ backgroundColor: "#f9fd5d" }} />
+      </div>
       </div>
       <div className={styles.productSection}>
         <h2>PRODUCTS</h2>

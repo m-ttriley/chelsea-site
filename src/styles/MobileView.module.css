@@ -6,13 +6,21 @@
 
 .imageCarouselContainer {
   width: 100%;
-  height: 300px;
-  border-top: 2px solid #f9fd5d;
-  border-bottom: 2px solid #f9fd5d;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f9fd5d;
+}
+
+.heroContainer {
+  background: #fff;
+  border: 7px solid #f9fd5d;
+  border-radius: 55px;
+  height: 320px;
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
   margin-bottom: 25px;
 }
 
