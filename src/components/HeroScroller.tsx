@@ -54,7 +54,15 @@ const HeroScroller: React.FC = () => {
       "#7a8888", "#7a8688", "#7a8388", "#7a8188", "#7a7f88", "#7a7c88",
       "#7a7a88", "#7c7a88", "#7f7a88", "#817a88", "#837a88", "#867a88",
       "#887a88", "#887a86", "#887a83", "#887a81", "#887a7f", "#887a7c"
-    ]
+    ],
+    background: [
+    "#4e483c", "#4e4b3c", "#4e4b3c", "#4b4e3c", "#484e3c", "#454e3c",
+    "#424e3c", "#3f4e3c", "#3c4e3c", "#3c4e3f", "#3c4e42", "#3c4e45",
+    "#3c4e48", "#3c4e4b", "#3c4e4e", "#3c4b4e", "#3c484e", "#3c454e",
+    "#3c424e", "#3c3f4e", "#3c3c4e", "#3f3c4e", "#423c4e", "#453c4e",
+    "#483c4e", "#4b3c4e", "#4e3c4e", "#4e3c4b", "#4e3c48", "#4e3c45",
+    "#4e3c42", "#4e3c3f", "#4e3c3c", "#4e3f3c", "#4e423c", "#4e453c"
+  ],
   }
 
   const [colorIndex, setColorIndex] = useState(0);
@@ -165,9 +173,9 @@ const HeroScroller: React.FC = () => {
           </div>
           <div className={styles.productSection} style={{transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors[colorCode][colorIndex]}} ref={productsRef}>
             <div className={styles.productHeader}>
-            <h2 style={{transitionDuration: quickTransition ? '0.5s' : '2s', color: colors['gray'][colorIndex]}}>PRODUCTS</h2>
+            <h2 style={{transitionDuration: quickTransition ? '0.5s' : '2s', color: colors['background'][colorIndex]}}>PRODUCTS</h2>
             </div>
-            <div style={{transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors['gray'][colorIndex]}} className={styles.productList}>
+            <div style={{transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors['background'][colorIndex]}} className={styles.productList}>
               <ProductItem
                 imageSrc="/images/products/peppermint.png"
                 imageAlt="Peppermint"
