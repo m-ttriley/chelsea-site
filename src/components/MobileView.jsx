@@ -1,13 +1,94 @@
-import React from 'react';
+'use client';
+
+import React, { useRef, useState } from 'react';
 import styles from '../styles/MobileView.module.css';
 import ImageCarousel from './ImageCarousel';
 import ProductItem from './ProductItem';
 import LogoComponent from './LogoComponent';
+import { slide as Menu } from 'react-burger-menu'
 
 const MobileView = () => {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const productsRef = useRef(null);
+  const containerRef = useRef(null);
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const scrollTo = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    // if (ref.current && containerRef.current) {
+    //   console.log(containerRef.current.scrollTo({top: 1000}));
+    //   containerRef.current.scrollTo({
+    //     top: ref.current.offsetTop,
+    //     behavior: 'smooth',
+    //   });
+    // }
+  };
+
+  const handleStateChange = (state) => {
+    setMenuOpen(state.menuOpen);
+  }
+
+  const burgerStyles = {
+  bmBurgerButton: {
+    position: 'absolute',
+    width: '25px',
+    height: '25px',
+    right: '36px',
+    top: '36px'
+  },
+  bmBurgerBars: {
+    background: '#f9fd5d',
+    height: '10%',
+  },
+  bmBurgerBarsHover: {
+    background: '#a90000'
+  },
+  bmCrossButton: {
+    height: '24px',
+    width: '24px'
+  },
+  bmCross: {
+    background: '#bdc3c7'
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%',
+    width: 'auto',
+  },
+  bmMenu: {
+    background: '#4e483c',
+    padding: '2.5em 1.5em 0',
+    fontSize: '1.15em'
+  },
+  bmMorphShape: {
+    fill: '#373a47'
+  },
+  bmItemList: {
+    color: '#b8b7ad',
+    padding: '0.8em'
+  },
+  bmItem: {
+    display: 'inline-block'
+  },
+  bmOverlay: {
+    background: 'rgba(0, 0, 0, 0.3)'
+  }
+}
+
   return (
-    <div>
-      <div className={styles.headerImageContainer}>
+    <div id="scroll-container" ref={containerRef}>
+      <Menu right isOpen={isMenuOpen} onStateChange={(state) => handleStateChange(state)} styles={burgerStyles}>
+        <button className={styles.controlButton} style={{ backgroundColor: '#f9fd5d' }} onClick={() => { setMenuOpen(false); scrollTo(homeRef) }}> home </button>
+        <button className={styles.controlButton} style={{ backgroundColor: '#3d9ccc' }} onClick={() => { setMenuOpen(false); scrollTo(productsRef) }}> products </button>
+        <button className={styles.controlButton} style={{ backgroundColor: '#8ec444' }} onClick={() => { setMenuOpen(false); scrollTo(aboutRef) }}> about </button>
+        <button className={styles.controlButton} style={{ backgroundColor: '#b9327e' }} onClick={() => { scrollTo(homeRef) }}> instagram </button>
+        <button className={styles.controlButton} style={{ backgroundColor: '#887a7a' }} onClick={() => { scrollTo(homeRef) }}> contact </button>
+      </Menu>
+      <div className={styles.headerImageContainer} ref={homeRef}>
         <LogoComponent fill={'#f9fd5d'}></LogoComponent>
       </div>
       <div className={styles.heroContainer}>
@@ -15,7 +96,7 @@ const MobileView = () => {
         <ImageCarousel style={{ backgroundColor: "#f9fd5d" }} />
       </div>
       </div>
-      <div className={styles.productSection}>
+      <div className={styles.productSection} ref={productsRef}>
         <h2>PRODUCTS</h2>
         <div style={{ borderBottom: '1px solid #f8f3ce', width: '40%', margin: 'auto', opacity: '0.2' }}></div>
       </div>
@@ -42,7 +123,7 @@ const MobileView = () => {
           description="Notes: Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil"
           />
       </div>
-      <div className={styles.aboutSection}>
+      <div className={styles.aboutSection} ref={aboutRef}>
         <h2>ABOUT</h2>
         <div style={{ borderBottom: '1px solid #f8f3ce', width: '40%', margin: 'auto', opacity: '0.2' }}></div>
         <p>
