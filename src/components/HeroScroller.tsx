@@ -225,16 +225,25 @@ const HeroScroller: React.FC = () => {
         <div className={styles.signup}>
           Sign up for updates!
         </div>
-        <div style={{ transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors[colorCode][colorIndex]}} className={styles.emailInputContainer} >
-        <input
-          type="email"
-          placeholder="email address" 
-          className={colorCode === 'yellow' ? styles.emailInput : `${styles.emailInput} ${styles.emailInputWhite}`}
-          />
-        <button className={styles.signupButton} style={{color: colorCode === 'yellow' ? 'black' : 'white'}}>
-          submit
-        </button>
-        </div>
+        <form action="https://form.flodesk.com/forms/68716212bedecce39b8014a9/submit" method="post">
+        {typeof window !== 'undefined' && document.referrer.includes('flodesk.com') ? (
+          <div style={{ padding: '16px', textAlign: 'center', color: colorCode === 'yellow' ? 'black' : 'white' }}>
+            Thanks
+          </div>
+        ) : (
+          <div style={{ transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors[colorCode][colorIndex]}} className={styles.emailInputContainer} >
+            <input
+              type="email"
+              placeholder="email address" 
+              maxLength={255} name="email"
+              className={colorCode === 'yellow' ? styles.emailInput : `${styles.emailInput} ${styles.emailInputWhite}`}
+            />
+            <button type='submit' className={styles.signupButton} style={{color: colorCode === 'yellow' ? 'black' : 'white'}}>
+              submit
+            </button>
+          </div>
+        )}
+        </form>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', margin: '14px 0', marginTop: '24px' }}>
         <div style={{ width: '24px', height: '24px', cursor: 'pointer', marginRight: '1px' }}>
