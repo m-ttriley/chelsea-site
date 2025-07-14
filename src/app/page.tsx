@@ -29,28 +29,47 @@ export default function Page() {
     "#4e3c42", "#4e3c3f", "#4e3c3c", "#4e3f3c", "#4e423c", "#4e453c"
   ];
 
-    useEffect(() => {
-    const interval = setInterval(() => {
+useEffect(() => {
+  const originalFetch = window.fetch;
 
-      setColorIndex(prev => {
-        if (forward) {
-          if (prev >= colors.length - 1) {
-            setForward(false);
-            return prev - 1;
-          }
-          return prev + 1;
-        } else {
-          if (prev <= 0) {
-            setForward(true);
-            return prev + 1;
-          }
+  // window.fetch = async (...args) => {
+  //   const [url, options] = args;
+
+  //   const response = await originalFetch(...args);
+
+  //   // Check for target API call
+  //   const urlString = typeof url === 'string' ? url : url instanceof URL ? url.toString() : url?.url ?? '';
+  //   if (urlString.includes('/form.flodesk.com/forms/') && response.ok) {
+  //     console.log('Intercepted target API call!');
+  //     // You can trigger any state or event here
+  //   }
+
+  //   return response;
+  // };
+
+  const interval = setInterval(() => {
+    setColorIndex(prev => {
+      if (forward) {
+        if (prev >= colors.length - 1) {
+          setForward(false);
           return prev - 1;
         }
-      });
-    }, 2000); // Change interval time here
+        return prev + 1;
+      } else {
+        if (prev <= 0) {
+          setForward(true);
+          return prev + 1;
+        }
+        return prev - 1;
+      }
+    });
+  }, 2000); // Change interval time here
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [forward]);
+  return () => {
+    clearInterval(interval);
+    window.fetch = originalFetch; // Restore original fetch on cleanup
+  };
+}, [forward]);
 
   const isMobile = useIsMobile();
   if (!isMobile) {

@@ -66,8 +66,24 @@ const HeroScroller: React.FC = () => {
   }
 
   const [colorIndex, setColorIndex] = useState(0);
+  const [emailValue, setEmailValue] = useState('');
   const [quickTransition, setQuickTransition] = useState(false);
+  const [submitPending, setSubmitPending] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
   const [forward, setForward] = useState(true);
+
+  const triggerSubmit = () => {
+    setSubmitPending(true);
+
+    const interval = setInterval(() => {
+      const checkEl = document.querySelector('.fd-form-check');
+      if (!checkEl) {
+      setSubmitSuccess(true);
+      setSubmitPending(false);
+      clearInterval(interval);
+      }
+    }, 500);
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -225,25 +241,78 @@ const HeroScroller: React.FC = () => {
         <div className={styles.signup}>
           Sign up for updates!
         </div>
-        <form action="https://form.flodesk.com/forms/68716212bedecce39b8014a9/submit" method="post">
-        {typeof window !== 'undefined' && document.referrer.includes('flodesk.com') ? (
-          <div style={{ padding: '16px', textAlign: 'center', color: colorCode === 'yellow' ? 'black' : 'white' }}>
-            Thanks
-          </div>
-        ) : (
-          <div style={{ transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors[colorCode][colorIndex]}} className={styles.emailInputContainer} >
-            <input
+        <div
+  className={`${styles.emailInputContainer} ff-68716212bedecce39b8014a9`}
+  data-ff-el="root"
+  data-ff-version="3"
+  data-ff-type="inline"
+  data-ff-name="ribbonBanner"
+  data-ff-stage="default"
+  style={{ transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors[colorCode][colorIndex]}}>
+  
+  <div
+    data-ff-el="config"
+    data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJyZWRpcmVjdCIsIm1lc3NhZ2UiOiIiLCJyZWRpcmVjdFVybCI6IiJ9LCJjb2kiOmZhbHNlLCJzaG93Rm9yUmV0dXJuVmlzaXRvcnMiOnRydWUsIm5vdGlmaWNhdGlvbiI6dHJ1ZX0="
+    style={{display: "none"}}></div>
+
+  <div className="ff-68716212bedecce39b8014a9__container">
+    <form
+      className="ff-68716212bedecce39b8014a9__form"
+      action="https://form.flodesk.com/forms/68716212bedecce39b8014a9/submit"
+      method="post"
+      data-ff-el="form"
+      onSubmit={() => triggerSubmit()}>
+      <div
+        className="ff-68716212bedecce39b8014a9__content fd-form-content"
+        data-ff-el="content">
+        <div className="ff-68716212bedecce39b8014a9__fields" data-ff-el="fields" style={{width: '50%',
+    display: 'inline-block'}}>
+          <div className="ff-68716212bedecce39b8014a9__field fd-form-group">
+            {!submitPending && <input
+              onChange={(e) => setEmailValue(e.target.value)}
+              value={emailValue}
+              id="ff-68716212bedecce39b8014a9-email"
+              className={`${styles.emailInput} ff-68716212bedecce39b8014a9__control fd-form-control`}
               type="email"
-              placeholder="email address" 
-              maxLength={255} name="email"
-              className={colorCode === 'yellow' ? styles.emailInput : `${styles.emailInput} ${styles.emailInputWhite}`}
-            />
-            <button type='submit' className={styles.signupButton} style={{color: colorCode === 'yellow' ? 'black' : 'white'}}>
-              submit
-            </button>
+              maxLength={255}
+              name="email"
+              placeholder="Email address"
+              data-ff-tab="email::submit"
+              required />}
           </div>
-        )}
-        </form>
+          <input type="text" maxLength={255} name="confirm_email_address" style={{display: "none"}} />
+        </div>
+          {submitSuccess ? <span className={styles.signupButton}>thanks!</span> : <button disabled={!emailValue}
+            type="submit"
+            className={`${styles.signupButton} ff-68716212bedecce39b8014a9__button fd-btn`}
+            data-ff-el="submit"
+            data-ff-tab="submit"
+            style={{ transitionDuration: quickTransition ? '0.5s' : '2s', backgroundColor: colors[colorCode][colorIndex]}}>
+            <span>submit</span>
+          </button>}
+      </div>
+      {/* <div className={`ff-68716212bedecce39b8014a9__success fd-form-success ${styles.successMessage}`} data-ff-el="success">
+        <div className="ff-68716212bedecce39b8014a9__success-message">
+          <div>
+            <div>
+              <div data-paragraph="true">Thank you for subscribing!</div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="ff-68716212bedecce39b8014a9__error fd-form-error" style={{display: 'none'}} data-ff-el="error">err</div>
+    </form>
+  </div>
+</div>
+{/* <div id="fd-form-68716212bedecce39b8014a9"></div>
+<Script>{`
+  window.fd('form', {
+    formId: '68716212bedecce39b8014a9',
+    containerEl: '#fd-form-68716212bedecce39b8014a9'
+  });`}
+</Script> */}
+
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', margin: '14px 0', marginTop: '24px' }}>
         <div style={{ width: '24px', height: '24px', cursor: 'pointer', marginRight: '1px' }}>

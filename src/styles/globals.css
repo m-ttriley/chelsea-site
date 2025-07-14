@@ -70,3 +70,22 @@ body {
     background-color: #4e483c;
   }
 }
+
+.fd-form-feedback {
+  color: black;
+  font-family: 'BG-Light';
+  /* display: inline-block; */
+  position: absolute;
+  left: 50%;
+  font-size: 18px;
+  top: 12%;
+}
+
+.fd-form-captcha {
+  color: black;
+  font-family: 'BG-Light';
+  left: 25px;
+  position: absolute;
+  font-size: 18px;
+  top: 12%;
+}

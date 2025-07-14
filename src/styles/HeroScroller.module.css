@@ -195,6 +195,7 @@
 
 .emailInputContainer {
     transition: all 2s linear;
+    height: 43px;
     border: none;
     padding-top: 4px;
     padding-bottom: 8px;
@@ -206,6 +207,10 @@
     position: relative;
     margin-top: 16px;
   }
+  
+  .successMessage {
+    /* display: none; */
+  }
 
   .emailInput {
     background: none;
@@ -215,6 +220,7 @@
     font-family: 'BG-Light';
     font-size: 18px;
     transition: all 0.5s linear;
+    width: 100%;
 
     &::placeholder {
       transition: all 0.5s linear;
