@@ -88,4 +88,8 @@ body {
   position: absolute;
   font-size: 18px;
   top: 12%;
+
+  @media (max-width: 768px) {
+    top: 15%;
+  }
 }
