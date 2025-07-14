@@ -7,7 +7,7 @@ import { ReactNode } from 'react';
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <Script>
+      <Script id='flodesk-script-1'>
   {`(function(w, d, t, h, s, n) {
     w.FlodeskObject = n;
     var fn = function() {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     f.parentNode.insertBefore(sn, f);
   })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');`}
 </Script>
-<Script>
+<Script id='flodesk-script-2'>
   {`window.fd('form:handle', {
     formId: '68716212bedecce39b8014a9',
     rootEl: '.ff-68716212bedecce39b8014a9',
