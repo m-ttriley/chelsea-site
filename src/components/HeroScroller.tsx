@@ -72,7 +72,7 @@ const HeroScroller: React.FC = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [forward, setForward] = useState(true);
 
-  const isValidEmail = (email) => {
+  const isValidEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
