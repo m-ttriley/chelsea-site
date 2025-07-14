@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "../styles/ImageCarousel.module.css"; // adjust as needed
 
 const images: string[] = [
@@ -33,12 +34,16 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ style }) => {
   const nextIndex = (currentIndex + 1) % images.length;
   return (
     <div className={styles.carouselContainer} style={style}>
-      <img
+      <Image
+        quality={40}
+        fill
         src={images[currentIndex]}
         className={`${styles.image} ${fade ? styles.fadeOut : styles.staticImage}`}
         alt="current"
       />
-      <img
+      <Image
+        fill
+        quality={40}
         src={images[nextIndex]}
         className={`${styles.image} ${fade ? styles.fadeIn : ''}`}
         alt="next"
