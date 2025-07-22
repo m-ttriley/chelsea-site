@@ -178,7 +178,7 @@ const MobileView = () => {
                           <div className="ff-68716212bedecce39b8014a9__fields" data-ff-el="fields" style={{
                             width: '50%',
                             display: 'inline-block',
-                            paddingTop: '4px',
+                            paddingTop: '7px',
                           }}>
                             <div className="ff-68716212bedecce39b8014a9__field fd-form-group">
                               {!submitPending && <input
