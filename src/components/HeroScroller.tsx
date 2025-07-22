@@ -201,7 +201,7 @@ const HeroScroller: React.FC = () => {
                   imageAlt="Peppermint"
                   title="Peppermint"
                   price="$20"
-                  description="Notes: Peppermint Essential Oil"
+                  description="Peppermint Essential Oil"
                   borderColor={colors['blue'][colorIndex]}
                 />
                 <ProductItem
@@ -209,7 +209,7 @@ const HeroScroller: React.FC = () => {
                   imageAlt="Wintergreen"
                   title="Wintergreen"
                   price="$20"
-                  description="Notes: Organic Wintergreen Essential Oil, Organic Cane Sugar"
+                  description="Organic Wintergreen Essential Oil, Organic Cane Sugar"
                   borderColor={colors['blue'][colorIndex]}
                 />
                 <ProductItem
@@ -217,7 +217,7 @@ const HeroScroller: React.FC = () => {
                   imageAlt="Citrus"
                   title="Citrus"
                   price="$20"
-                  description="Notes: Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil"
+                  description="Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil"
                   borderColor={colors['blue'][colorIndex]}
                 />
               </div>

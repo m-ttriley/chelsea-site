@@ -78,7 +78,7 @@ useEffect(() => {
         <div>
           <HeroScroller />
           <div className={styles.footer}>
-            <p>Mobile view is not supported yet. Please use a desktop browser.</p>
+            <p></p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ useEffect(() => {
         {/* <HeroScroller /> */}
         <MobileView />
         <div className={styles.footer}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+          <p></p>
         </div>
       </div>
     </div>

@@ -120,21 +120,21 @@ const MobileView = () => {
           imageAlt="Peppermint"
           title="Peppermint"
           price="$20"
-          description="Notes: Peppermint Essential Oil"
+          description="Peppermint Essential Oil"
         />
           <ProductItem
           imageSrc="/images/products/spearmint.png"
           imageAlt="Wintergreen"
           title="Wintergreen"
           price="$20"
-          description="Notes: Organic Wintergreen Essential Oil, Organic Cane Sugar"
+          description="Organic Wintergreen Essential Oil, Organic Cane Sugar"
           />
           <ProductItem
           imageSrc="/images/products/citrus.png"
           imageAlt="Citrus"
           title="Citrus"
           price="$20"
-          description="Notes: Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil"
+          description="Organic Grapefruit Juice, Organic Lemon Juice, Organic Orange Essential Oil"
           />
       </div>
       <div className={styles.aboutSection} ref={aboutRef}>
